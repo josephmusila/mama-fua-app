@@ -13,7 +13,7 @@ class CustomWidgets{
     );
   }
 
-  Widget fieldRow(String title,TextEditingController controller,bool hideText){
+  Widget fieldRow({required String title,required TextEditingController controller,required bool hideText}){
     return Container(
       margin: EdgeInsets.all(10),
       height: 50,

@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fua">
    <application
+        android:requestLegacyExternalStorage="true"
         android:label="fua"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">

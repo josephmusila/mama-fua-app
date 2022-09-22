@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fua/cubits/notifications/notifications_cubit.dart';
+import 'package:fua/cubits/notifications/notifications_logic.dart';
 import 'package:fua/screens/homeScreen.dart';
+import 'package:fua/services/notificationsService.dart';
 
 class NotificationScreen extends StatelessWidget {
   // const NotificationScreen({Key? key}) : super(key: key);
 // var workers=[]
   @override
   Widget build(BuildContext context) {
+    
     return SafeArea(
       child: Scaffold(
         extendBodyBehindAppBar: true,
@@ -49,21 +54,9 @@ class NotificationScreen extends StatelessWidget {
                 color: Colors.blue,
               ),
               Container(
-                height: MediaQuery.of(context).size.height * 0.9,
-                child: ListView.builder(
-                    itemCount: 10,
-                    itemBuilder: (context, index) {
-                      return Card(
-                        elevation: 3,
-                        shadowColor: Colors.blue,
-                        child: ListTile(
-                          leading: Text((index + 1).toString()),
-                          title: const Text(
-                            "New notification",
-                          ),
-                        ),
-                      );
-                    }),
+               height: MediaQuery.of(context).size.height * 0.8,
+               width: double.maxFinite,
+               child: BlocProvider(create:(context)=>NotificationsCubit(notificationService: NotificationService(), id: "1" ) ,child: NotificationLogicScreen(id: '1',),),
               ),
             ],
           ),

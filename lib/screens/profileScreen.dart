@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:fua/models/user.dart';
 import 'package:flutter_sms/flutter_sms.dart';
+import '../services/searchWorker.dart';
 import '../widgets/profilecard.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -112,7 +113,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             children: [
                               ProfileCard(
                                 label: "Age",
-                                value: widget.worker.age.toString(),
+                                value: widget.worker.id.toString(),
                               ),
                               ProfileCard(
                                 label: "Gender",
@@ -173,7 +174,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   //   isClicked = true;
                                   // });
                                   sending_SMS('Hello, this the test message',
-                                      [widget.worker.phoneNumber.toString()]);
+                                      [widget.worker.phone.toString()]);
                                   // const CircularProgressIndicator();
                                 },
                                 icon: const Icon(
@@ -210,7 +211,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               child: IconButton(
                                 onPressed: () {
                                   launch(
-                                      ('tel://${widget.worker.phoneNumber}'));
+                                      ('tel://${widget.worker.phone}'));
                                 },
                                 icon: const Icon(
                                   Icons.call,
