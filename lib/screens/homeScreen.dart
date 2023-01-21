@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                   return BlocProvider(
                       create: (context) => NotificationsCubit(
                             notificationService: NotificationService(),
-                            id: "1",
+                            id: "6",
                           ),
                       child: NotificationLogicScreen(
                         id: "1",
@@ -160,7 +160,11 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Expanded(
                     child: Center(
-                      child: Text("Welcome to Mama Fua"),
+                      child: Text("Welcome",style:TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      )),
                     ),
                   ),
                   Expanded(

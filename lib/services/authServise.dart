@@ -7,8 +7,8 @@ import 'package:http/http.dart' as http;
 import 'package:path/path.dart';
 
 class BaseUrl {
-  final baseUrl = "https://feliz.herokuapp.com/api/";
-  // final baseUrl = "http://192.168.137.231:8000/api/";
+  // final baseUrl = "https://feliz.herokuapp.com/api/";
+  final baseUrl = "http://10.42.0.1:8000/api/";
 
   String url() {
     return baseUrl;

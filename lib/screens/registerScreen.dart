@@ -278,7 +278,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Container(
                         margin: EdgeInsets.only(left: 50, right: 50),
                         // ignore: deprecated_member_use
-                        child: RaisedButton(
+                        child: ElevatedButton(
                           onPressed: () async {
                             if (_formKey.currentState!.validate()) {
                               setState(() {
@@ -341,8 +341,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           child: Text(
                             "Register",
                           ),
-                          textColor: Colors.white,
-                          color: Colors.green,
+                          // textColor: Colors.white,
+                          // color: Colors.green,
                         ),
                       ),
                     ],

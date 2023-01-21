@@ -302,7 +302,6 @@ class _BookServiceState extends State<BookService> {
                                                         .post(url, body: {
                                                       "work_description":      
                                                          descriptionController.text,
-                                                         
                                                       "requested_by":
                                                           widget.email,
                                                       "job_date":
